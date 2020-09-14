@@ -1,0 +1,43 @@
+
+body {
+  padding-top: 56px; 
+
+}
+
+.img-chatbot{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    
+}
+.img-edunited{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+.img-emsplus{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+.img-devops{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+.img-cicd-steps{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+.img-mentors{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
