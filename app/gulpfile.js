@@ -10,9 +10,9 @@ const merge = require("merge-stream");
 function browserSync(done) {
   browsersync.init({
     server: {
-      baseDir: "./"
+      baseDir: "./web"
     },
-    port: 3000
+    port: 80
   });
   done();
 }
@@ -21,11 +21,6 @@ function browserSync(done) {
 function browserSyncReload(done) {
   browsersync.reload();
   done();
-}
-
-// Clean vendor
-function clean() {
-  return del(["./vendor/"]);
 }
 
 // Bring third party dependencies from node_modules into vendor directory
@@ -49,12 +44,11 @@ function watchFiles() {
 }
 
 // Define complex tasks
-const vendor = gulp.series(clean, modules);
+const vendor = gulp.series(modules);
 const build = gulp.series(vendor);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
-exports.clean = clean;
 exports.vendor = vendor;
 exports.build = build;
 exports.watch = watch;
